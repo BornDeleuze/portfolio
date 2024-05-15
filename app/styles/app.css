@@ -1,1 +1,135 @@
 /* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+
+/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+
+/* main colors: white #F1EFEF green #CCC8AA charcoal #7D7C7C black #191717 */
+
+/* app/styles.css */
+body {
+  margin: 0;
+  font-family: futura-pt, futura, sans-serif;
+  background-color: #fff;
+}
+
+header {
+  background-color: #fff;
+  color: #183354;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 35%);
+  border-bottom: 15px solid #183354;
+  padding: 20px;
+}
+a{
+  text-decoration: none;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+h3 {
+  margin: 0;
+}
+
+/* hamburger */
+.hamburger1 {
+  height: 30px;
+  margin: 7px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  z-index: 120;
+}
+
+.hamburger1 div {
+  background-color: rgb(61 61 61);
+  position: relative;
+  width: 30px;
+  height: 5px;
+  margin-top: 7px;
+  transition: all 0.2s ease-in-out;
+}
+
+#toggle1 {
+  display: none;
+}
+
+#toggle1:checked + .hamburger1 .top {
+  transform: rotate(-45deg);
+  margin-top: 22.5px;
+}
+
+#toggle1:checked + .hamburger1 .meat {
+  transform: rotate(45deg);
+  margin-top: -5px;
+}
+
+#toggle1:checked + .hamburger1 .bottom {
+  transform: scale(0);
+}
+
+#toggle1:checked ~ .menu1 {
+  height: 340px;
+}
+
+/* Menu */
+.menu1 {
+  position: absolute;
+  border-radius: 0.5em;
+  min-width: 7em;
+  background-color: #ccc8aa;
+  margin: 10px 0 0 -45px;
+
+  /* margin-left: -40px; */
+  display: grid;
+  grid-template-rows: 1fr repeat(4, 0.5fr);
+  grid-row-gap: 25px;
+  list-style: none;
+  clear: both;
+  width: auto;
+  text-align: center;
+  height: 0;
+  overflow: hidden;
+  z-index: 120;
+  transition: all 0.3s ease;
+}
+
+.menu1 a:first-child {
+  margin-top: 40px;
+}
+
+.menu1 a:last-child {
+  margin-bottom: 40px;
+}
+
+.link1 {
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+  font:
+    700 20px Oswald,
+    sans-serif;
+  color: #191717;
+}
+
+.link1:hover {
+  background-color: #191717;
+  color: #f1efef;
+  transition: all 0.3s ease;
+}
+
+/* about */
+.about {
+  padding: 10px;
+}
+
+.two-column {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+img {
+  max-width: 300px;
+}
