@@ -10,6 +10,9 @@ body {
   font-family: futura-pt, futura, sans-serif;
   background-color: #fff;
 }
+a{
+  text-decoration: none;
+}
 
 header {
   font-size:1.5em;
@@ -17,7 +20,7 @@ header {
   color: #183354;
   box-shadow: 0 2px 10px rgb(0 0 0 / 35%);
   border-bottom: 15px solid #183354;
-  padding: 20px;
+  padding: 0 20px 0 20px;
   display: flex;
   gap: 2em;
   .r-head{
@@ -44,9 +47,7 @@ header {
     border-radius: 50%;
   }
 }
-a{
-  text-decoration: none;
-}
+
 nav{
   padding: 10px;
   .wrap{
@@ -57,11 +58,11 @@ nav{
     margin-right: auto;
     max-width: 1020px;
   }
+  h3 {
+    margin: 0;
+  }
 }
 
-h3 {
-  margin: 0;
-}
 
 /* hamburger */
 .hamburger1 {
@@ -145,7 +146,8 @@ h3 {
 }
 
 .link1:hover {
-  background-color: #191717;
+  background-color: #183354;
+  border-radius: .5em;
   color: #f1efef;
   transition: all 0.3s ease;
 }
