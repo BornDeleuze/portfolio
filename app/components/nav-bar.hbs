@@ -1,10 +1,16 @@
 {{yield}}
  <nav>
- <div>
-    <LinkTo @route="home" class="link1">HOME</LinkTo>
+  <div class="wrap">
+    <div>
+      <LinkTo @route="home" class="link1">HOME</LinkTo>
+    </div>
+    <div>
+      <LinkTo @route="about" class="link1">ABOUT</LinkTo>
+    </div>
+    <div>
+      <LinkTo @route="contact" class="link1">CONTACT</LinkTo>
+    </div>
   </div>
-  <div><LinkTo @route="about" class="link1">ABOUT</LinkTo></div>
-  <div><LinkTo @route="contact" class="link1">CONTACT</LinkTo></div>
 
 {{!-- make hamburger for responsive
   <section class="p-menu1">
