@@ -63,7 +63,6 @@ nav{
   }
 }
 
-
 /* hamburger */
 .hamburger1 {
   height: 30px;
@@ -165,4 +164,10 @@ nav{
 
 img {
   max-width: 300px;
+}
+
+.content{
+  display: flex;
+  padding: 5em;
+  gap: 5em;
 }
