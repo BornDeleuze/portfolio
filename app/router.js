@@ -1,13 +1,14 @@
 import EmberRouter from '@ember/routing/router';
-import config from 'recipe-portfolio/config/environment';
+import config from './config/environment';
 
-export default class Router extends EmberRouter {
+const Router = class extends EmberRouter {
   location = config.locationType;
   rootURL = config.rootURL;
-}
+};
 
 Router.map(function () {
-  this.route('home', { path: '/' });
   this.route('about');
-  this.route('contact');
+  this.route('recipe');
 });
+
+export default Router;

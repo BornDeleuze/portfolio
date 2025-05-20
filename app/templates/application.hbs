@@ -1,8 +1,58 @@
-{{page-title "RecipePortfolio"}}
-<Header/>
-<NavBar/>
-<div class="content">
-  <Resume/>
-  <About/>
+<div class="banner-alert" id="bannerAlert">
+  Your questions. My inbox. <a href="mailto:matt@example.com">Get in touch.</a>
+  <button class="banner-close" onclick="document.getElementById('bannerAlert').style.display='none'">×</button>
 </div>
-{{outlet}}
+
+<header class="site-header">
+  <h1>The Code Kitchen: Recipes for the Web</h1>
+</header>
+
+<div class="page-wrapper">
+  <aside class="side-ad left-ad">
+    <a href="https://github.com/matt/project1" target="_blank" rel="noopener noreferrer">
+      Project One
+    </a>
+  </aside>
+
+  <main class="main-content">
+    <section class="welcome">
+      <h2>Welcome to My Culinary Code Kitchen</h2>
+      <p>Here, we mix code with creativity. My portfolio is served in the style of a cooking blog—pull up a chair and explore!</p>
+    </section>
+
+    <section class="about">
+      <h2>About the Chef</h2>
+      <p>I’m Matt Beaudoin, a full stack web developer who crafts web experiences like fine meals—intentional, accessible, and rich with flavor.</p>
+    </section>
+
+    <section class="recipe">
+      <h2>Recipe: Full Stack Developer</h2>
+      <h3>Ingredients</h3>
+      <ul>
+        <li>1 cup Ember.js</li>
+        <li>1 cup JavaScript (ES6+)</li>
+        <li>1/2 cup HTML & SCSS</li>
+        <li>1/2 cup Ruby on Rails</li>
+        <li>1 tbsp Accessibility</li>
+        <li>A dash of React</li>
+        <li>Optional: Node, SQLite, Git</li>
+      </ul>
+
+      <h3>Instructions</h3>
+      <ol>
+        <li>Start with a foundation in literature and art to cultivate creative thinking.</li>
+        <li>Add experience from Flatiron School's Full Stack Engineering program.</li>
+        <li>Mix in real-world projects like a chat room app and browser game.</li>
+        <li>Stir frequently with work at Marsh McLennan Agency, improving accessibility and modernizing Ember apps.</li>
+        <li>Simmer with freelance projects and collective tech work in Quilcene, WA.</li>
+        <li>Serve with a side of collaboration, curiosity, and continuous learning.</li>
+      </ol>
+    </section>
+  </main>
+
+  <aside class="side-ad right-ad">
+    <a href="https://github.com/matt/project2" target="_blank" rel="noopener noreferrer">
+      Project Two
+    </a>
+  </aside>
+</div>
