@@ -1,3 +1,5 @@
+/* Import a cursive font (assuming you're using a <link> to Google Fonts in HTML) */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 body {
   font-family: 'Georgia', serif;
   background-color: #fff8f8;
@@ -65,32 +67,112 @@ body {
   background-color: #fff1f5;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  max-width: 700px;
+  max-width: 100%;
 }
 
-.side-ad {
-  flex: 0 0 120px; /* fixed width for ads */
-  background-color: blue;
-  padding: 1rem;
+.recipe-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  text-align: left;
+}
+
+.recipe-rating {
+  color: #f5b301; /* Golden yellow */
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.recipe-description {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+.recipe-narrative {
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  color: #333;
+
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+.jump-to-recipe {
+  background-color: #733f60; /* plum tone */
+  color: #ffe5ec;
+  border: none;
+  padding: 0.5rem 1rem;
   border-radius: 8px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
   font-weight: bold;
   font-size: 1rem;
-  color: #ffe5ec;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.side-ad a {
-  color: inherit;
-  text-decoration: none;
+.jump-to-recipe:hover {
+  background-color: #8a506f;
 }
 
-.side-ad:hover {
-  background-color: #8a506f;
+.project-ad {
+  margin-top: 2rem;
+  text-align: center;
+  h3 {
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Futura PT', sans-serif;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .ad-card {
+    background-color: #fff1f5;
+    border: 2px solid rgba(115, 64, 96, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    p {
+      font-size: 1rem;
+      color: #3e3e3e;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      background-color: rgb(115, 64, 96);
+      color: #ffe5ec;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #8a506f;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+  }
 }
 
 section {
@@ -136,19 +218,81 @@ section.recipe ol {
   list-style: decimal;
 }
 
+/* Two-column layout */
+/* Already present: banner-alert and site-header styles — keep as-is */
+
+/* Two-column layout wrapper inside .main-content */
+.two-column {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.left-column {
+  flex: 2;
+  min-width: 300px;
+}
+
+.right-column {
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+}
+
+/* About Card */
+.about-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 5rem 1.5rem 1.5rem; /* Add top padding to make room for overlapping photo */
+  text-align: center;
+  position: relative;
+  overflow: visible;
+}
+
+/* Profile Photo Overlapping */
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: -60px; /* Pull halfway out of card */
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid #fff1f5; /* Optional: add a border to separate from card */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
 @media (max-width: 900px) {
   .page-wrapper {
     flex-direction: column;
     padding: 0 1rem;
   }
-  
+  .two-column {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    min-width: 100%;
+  }
+
+  .profile-photo {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .side-ad {
     flex: none;
     width: 100%;
     margin: 0.5rem 0;
     border-radius: 8px;
   }
-  
+
   .main-content {
     max-width: 100%;
     padding: 2rem 1rem;
