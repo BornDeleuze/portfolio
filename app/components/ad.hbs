@@ -3,6 +3,9 @@
     <div class="ad-card">
       <img src={{@image}} alt={{@alt}}>
       <h3>{{@title}}</h3>
+      {{#if @tech}}
+        <div class="project-tech">{{@tech}}</div>
+      {{/if}}
       <p>{{@description}}</p>
     </div>
   </a>
