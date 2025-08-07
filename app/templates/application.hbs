@@ -5,32 +5,30 @@
   <h2>From Timber Frames to Frontend Frameworks</h2>
 </header>
 
-<nav class="quick-nav">
-  <div class="nav-buttons">
-    <button class="jump-button" onclick="document.getElementById('recipeContent').scrollIntoView({ behavior: 'smooth' })" type="button">
-      Jump to Recipe ↓
-    </button>
-    <button class="jump-button" onclick="document.getElementById('ingredients').scrollIntoView({ behavior: 'smooth' })" type="button">
-      View Skills 🧑‍💻
-    </button>
-    <button class="jump-button" onclick="document.getElementById('nutrition').scrollIntoView({ behavior: 'smooth' })" type="button">
-      See Experience 📊
-    </button>
-    <button class="jump-button" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" type="button">
-      Get In Touch 📧
-    </button>
-  </div>
-</nav>
-
 <div class="page-wrapper">
   <main class="main-content two-column">
     <div class="left-column">
       <section class="welcome">
         <h2>Welcome to My Culinary Code Kitchen</h2>
         <p>We are cookin up code with some creativity. You never read recipe narratives and you are wondering if I really have one on this portfolio... Don't worry, you can jump to the relevant bits and my projects are in the margins. Thanks for visiting!</p>
-        <button class="jump-to-recipe" onclick="document.getElementById('recipeContent').scrollIntoView({ behavior: 'smooth' })" type="button">
-          Jump to Recipe ↓
-        </button>
+        
+        <div class="jump-nav">
+          <div class="nav-buttons">
+            <button class="jump-to-recipe" onclick="document.getElementById('recipeContent').scrollIntoView({ behavior: 'smooth' })" type="button">
+              Jump to Recipe ↓
+            </button>
+            <button class="jump-button" onclick="document.getElementById('ingredients').scrollIntoView({ behavior: 'smooth' })" type="button">
+              View Skills
+            </button>
+            <button class="jump-button" onclick="document.querySelector('.right-column').scrollIntoView({ behavior: 'smooth' })" type="button">
+              Featured Projects
+            </button>
+            <button class="jump-button" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" type="button">
+              Get In Touch
+            </button>
+          </div>
+        </div>
+
       </section>
 
       <section class="recipe">
