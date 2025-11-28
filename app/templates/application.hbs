@@ -1,78 +1,83 @@
+{{! Skip to content for accessibility }}
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <BannerAlert />
 
 <header class="site-header">
-  <h1>The Code Kitchen </h1>
+  <h1>The Code Kitchen</h1>
   <h2>From Timber Frames to Frontend Frameworks</h2>
+  <div class="status-badge">Open to Opportunities</div>
 </header>
 
+<nav class="quick-nav" aria-label="Quick navigation">
+  <div class="nav-buttons">
+    <a href="#about" class="jump-button">About</a>
+    <a href="#skills" class="jump-button">Skills</a>
+    <a href="#projects" class="jump-button">Projects</a>
+    <a href="#contact" class="jump-button">Contact</a>
+  </div>
+</nav>
+
 <div class="page-wrapper">
-  <main class="main-content two-column">
+  <main id="main-content" class="main-content two-column">
     <div class="left-column">
+      
+      {{! Welcome Section }}
       <section class="welcome">
         <h2>Welcome to My Culinary Code Kitchen</h2>
-        <p>We are cookin up code with some creativity. You never read recipe narratives and you are wondering if I really have one on this portfolio... Don't worry, you can jump to the relevant bits and my projects are in the margins. Thanks for visiting!</p>
-        
-        <div class="jump-nav">
-          <div class="nav-buttons">
-            <button class="jump-to-recipe" onclick="document.getElementById('recipeContent').scrollIntoView({ behavior: 'smooth' })" type="button">
-              Jump to Recipe ↓
-            </button>
-            <button class="jump-button" onclick="document.getElementById('ingredients').scrollIntoView({ behavior: 'smooth' })" type="button">
-              View Skills
-            </button>
-            <button class="jump-button" onclick="document.querySelector('.right-column').scrollIntoView({ behavior: 'smooth' })" type="button">
-              Featured Projects
-            </button>
-            <button class="jump-button" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" type="button">
-              Get In Touch
-            </button>
-          </div>
-        </div>
-
+        <p>
+          Cooking up code with creativity and craftsmanship. You never read recipe narratives? 
+          Don't worry—jump to the relevant bits, or check out my featured projects. Thanks for visiting!
+        </p>
       </section>
 
-      <section class="recipe">
+      {{! Recipe/About Section }}
+      <section class="recipe" id="about">
         <div class="recipe-header">
           <h2 class="recipe-title">Full Stack Developer</h2>
-          <div class="recipe-rating">★★★★★</div>
-          <p class="recipe-description">A hearty blend of logic and creativity, slow-simmered with hands-on experience.</p>
+          <div class="recipe-rating" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="recipe-description">
+            A hearty blend of logic and creativity, slow-simmered with hands-on experience.
+          </p>
         </div>
         
         <div class="recipe-narrative">
           <p><em>"We make the road by walking"</em></p>
 
           <p>
-            Matt comes from a strong tradition of DIY and creative problem solving, with an emphasis on collaboration.
+            As a self-taught musician, sailor, and carpenter, I've honed the skill of learning new things. 
+            My music has taken me across 3 continents, sailing across oceans and seas, and through carpentry 
+            I built my own timber-framed cabin. Now I'm bringing that same dedication to software engineering.
           </p>
           <p>
-            As a self-taught musician, sailor, and carpenter, Matt has honed the skill of learning new things. His music has let him tour 3 continents, his sailing has taken him across oceans and seas, and through carpentry he lives in a self-built timber framed cabin. His current area of study is now software engineering. At Marsh McLennan Agency, collaboration and ownership were the keystones of his role as a Junior Software Engineer. His tenure involved enhancing multiple Ember.js projects, creating a new business website, refactoring improper and stale codebases, generally paying down large amounts of technical debt, and ensuring adherence to the latest industry practices.
+            At Marsh McLennan Agency as a Junior Software Engineer, I enhanced multiple Ember.js projects, 
+            built new business websites, refactored legacy code, and championed accessibility best practices. 
+            I believe collaborative work creates better outcomes—whether in bands, on boats, or in dev teams.
           </p>
           <p>
-            Matt's background has also driven him to embrace collaborative and inclusive work environments. Whether in bands and boats, in community organizing, in learning settings, on the job, or in the collectively run business he helped form, he believes that everyone brings something to the table, and that collaborative work creates better outcomes.
-          </p>
-          <p>
-            When Matt is not hacking you can find him in the forest hiking, sailing small boats, or helping run a small collective theatre project in Quilcene, Washington.
+            When not coding, you'll find me hiking Olympic forests, sailing small boats, or helping run 
+            a collective theatre project in Quilcene, Washington.
           </p>
         </div>
-        
-        <div id="recipeContent">
-          <h3 id="ingredients">Ingredients</h3>
+
+        {{! Skills Section }}
+        <div id="skills">
+          <h3>Technical Ingredients</h3>
           <ul class="ingredients-list">
-            <li><strong>1 cup Ember.js</strong> (modernizing apps, improving accessibility)</li>
-            <li><strong>1 cup JavaScript</strong> (ES6+, with a dash of React for flair)</li>
-            <li><strong>1/2 cup HTML & SCSS</strong> (semantic, accessible markup and styles)</li>
-            <li><strong>1/2 cup Ruby on Rails</strong> (building websites and APIs)</li>
-            <li><strong>1 tbsp Accessibility</strong> (WCAG standards and inclusive design)</li>
-            <li><strong>1/4 cup React with Redux</strong> (state management & UI components)</li>
-            <li><strong>A sprinkle of Node.js and SQLite</strong> (backend and data persistence)</li>
-            <li><strong>Generous helping of Git and version control</strong> (team collaboration)</li>
-            <li><strong>Dash of problem solving</strong> from carpentry, sailing, and music</li>
-            <li><strong>Pinch of teamwork, curiosity, and continuous learning</strong></li>
+            <li><strong>Ember.js</strong> — Modernizing apps, improving accessibility, component architecture</li>
+            <li><strong>JavaScript (ES6+)</strong> — Vanilla JS, React, DOM manipulation, async patterns</li>
+            <li><strong>HTML & CSS/SCSS</strong> — Semantic markup, responsive design, BEM methodology</li>
+            <li><strong>Ruby on Rails</strong> — RESTful APIs, MVC architecture, ActiveRecord</li>
+            <li><strong>React with Redux</strong> — State management, hooks, component patterns</li>
+            <li><strong>Node.js & SQLite</strong> — Backend development, database design</li>
+            <li><strong>Git & GitHub</strong> — Version control, PR reviews, collaborative workflows</li>
+            <li><strong>Web Accessibility</strong> — WCAG 2.1 AA compliance, ARIA, semantic HTML</li>
+            <li><strong>Problem Solving</strong> — Cross-disciplinary thinking from carpentry, sailing, and music</li>
           </ul>
 
-          {{! Nutritional Information Section }}
-          <div class="nutritional-info" id="nutrition">
-            <h3>Nutritional Information (Professional Impact)</h3>
+          {{! Nutritional Information }}
+          <div class="nutritional-info">
+            <h3>Professional Impact</h3>
             <div class="nutrition-facts">
               <div class="nutrition-item">
                 <div class="nutrition-number">3+</div>
@@ -80,95 +85,161 @@
               </div>
               <div class="nutrition-item">
                 <div class="nutrition-number">5+</div>
-                <div class="nutrition-label">Ember.js Projects Enhanced</div>
+                <div class="nutrition-label">Projects Enhanced</div>
               </div>
               <div class="nutrition-item">
                 <div class="nutrition-number">100%</div>
-                <div class="nutrition-label">WCAG Compliance Focus</div>
+                <div class="nutrition-label">WCAG Focus</div>
               </div>
               <div class="nutrition-item">
-                <div class="nutrition-number">∞</div>
-                <div class="nutrition-label">Learning Appetite</div>
+                <div class="nutrition-number">15+</div>
+                <div class="nutrition-label">Technologies Used</div>
               </div>
             </div>
           </div>
-
-          <h3>Instructions</h3>
-          <ol>
-            <li>Start by blending a strong foundation in literature and art to cultivate creative thinking and storytelling skills.</li>
-            <li>Whisk in intensive training from Flatiron School's Full Stack Software Engineering program, mixing theory with hands-on coding.</li>
-            <li>Fold in real-world ingredients: developing a chat room app and a browser game to sharpen both frontend and backend flavors.</li>
-            <li>Slow-cook professional experience at Marsh McLennan Agency—enhancing Ember.js projects, refactoring legacy code, and seasoning with accessibility best practices.</li>
-            <li>Sprinkle in diverse freelance projects and collective tech collaborations in Quilcene, WA, adding unique local flavor and versatility.</li>
-            <li>Infuse with a dash of skills learned from touring as a musician, sailing across oceans, and building a timber-framed cabin—perfecting problem-solving under varied conditions.</li>
-            <li>Stir in a generous helping of teamwork, empathy, and inclusive collaboration, baked over years of community organizing and collective business ownership.</li>
-            <li>Simmer continuously with curiosity, adaptability, and a hunger for learning new technologies and approaches.</li>
-            <li>Garnish with a passion for creating intentional, accessible, and rich web experiences that delight users and teams alike.</li>
-          </ol>
         </div>
       </section>
-      
-      <div class="recipe-serving" id="contact">
-        <h3>Bringing It to the Table</h3>
-        <p>Thanks for spending time in the Code Kitchen. If what I bring to the table complements your taste, let's collaborate.</p>
+
+      {{! Featured Projects Section }}
+      <section class="projects-showcase" id="projects">
+        <h2>Featured Projects</h2>
+        
+        <div class="projects-grid">
+          <article class="project-card">
+            <img 
+              src="/blanketchest2.jpg" 
+              alt="Custom wooden blanket chest showcasing craftsmanship"
+              class="project-image"
+              loading="lazy"
+            />
+            <div class="project-content">
+              <h3 class="project-title">Meristem Woodworks</h3>
+              <p class="project-description">
+                Custom furniture showcase website highlighting Olympic Peninsula craftsmanship. 
+                Built with responsive design and optimized for local artisan discovery.
+              </p>
+              <div class="project-tech">Ember.js • SCSS • Swiper.js</div>
+              <div class="project-links">
+                <a href="https://meristemwoodworks.com" target="_blank" rel="noopener noreferrer">
+                  View Live Site
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img 
+              src="/sasquatch.png" 
+              alt="Pixel art Sasquatch character from browser game"
+              class="project-image"
+              loading="lazy"
+            />
+            <div class="project-content">
+              <h3 class="project-title">Chopping</h3>
+              <p class="project-description">
+                Interactive browser game featuring smooth animations and engaging gameplay mechanics. 
+                Built entirely with vanilla JavaScript to showcase DOM manipulation and game logic.
+              </p>
+              <div class="project-tech">Vanilla JavaScript • HTML5 Canvas • CSS</div>
+              <div class="project-links">
+                <a href="https://chopping.netlify.app" target="_blank" rel="noopener noreferrer">
+                  Play Game
+                </a>
+                <a href="https://github.com/BornDeleuze/chopping" target="_blank" rel="noopener noreferrer">
+                  View Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img 
+              src="/back.jpg" 
+              alt="Historic Quilcene theatre building exterior"
+              class="project-image"
+              loading="lazy"
+            />
+            <div class="project-content">
+              <h3 class="project-title">Gray Coast Guildhall</h3>
+              <p class="project-description">
+                Community arts platform connecting local artists and audiences. Features event management, 
+                artist showcases, and engagement tools for rural arts spaces.
+              </p>
+              <div class="project-tech">React.js • Tailwind CSS • Vite</div>
+              <div class="project-links">
+                <a href="https://graycoastguildhall.netlify.app/" target="_blank" rel="noopener noreferrer">
+                  View Site
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      {{! Contact Section }}
+      <section class="contact-section" id="contact">
+        <h3>Let's Build Something Together</h3>
         <p>
-          <a class="cta-button" href="mailto:beaudoin.hax@gmail.com">Pull up a chair →</a>
-          or check out more projects in the margins.
+          Thanks for spending time in the Code Kitchen. If what I bring to the table complements 
+          your team's needs, let's connect and collaborate.
         </p>
-        {{! Contact info }}
+        <a class="cta-button" href="mailto:beaudoin.hax@gmail.com">
+          Get In Touch →
+        </a>
+        
         <div class="contact-details">
-          <p><strong>📧</strong> beaudoin.hax@gmail.com</p>
-          <p><strong>🐙</strong> <a href="https://github.com/BornDeleuze" target="_blank">GitHub Profile</a></p>
-          <p><strong>📍</strong> Quilcene, WA</p>
+          <p>
+            <span aria-label="Email"></span>
+            <a href="mailto:beaudoin.hax@gmail.com">beaudoin.hax@gmail.com</a>
+          </p>
+          <p>
+            <span aria-label="GitHub"></span>
+            <a href="https://github.com/BornDeleuze" target="_blank" rel="noopener noreferrer">
+              GitHub Profile
+            </a>
+          </p>
+          <p>
+            <span aria-label="Location"></span>
+            Quilcene, WA
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    {{! Right Sidebar }}
+    <aside class="right-column" aria-label="About and additional projects">
+      
+      <div class="about-card">
+        <div class="profile-section">
+          <img 
+            src="/20210628_113619.jpeg" 
+            alt="Matt Beaudoin" 
+            class="profile-photo"
+            loading="lazy"
+          />
+          <div class="about">
+            <h2>About the Chef</h2>
+            <p>
+              I'm Matt Beaudoin, a full stack web developer who crafts web experiences 
+              like fine meals—intentional, accessible, and rich with flavor.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="right-column">
-      <div class="about-card">
-        <img src="/20210628_113619.jpeg" alt="Matt Beaudoin" class="profile-photo" />
-        <section class="about">
-          <h2>About the Chef</h2>
-          <p>I'm Matt Beaudoin, a full stack web developer who crafts web experiences like fine meals—intentional, accessible, and rich with flavor.</p>
-        </section>
-      </div>
-      
-      <Ad 
-        @link="https://meristemwoodworks.com"
-        @image="blanketchest2.jpg"
-        @alt="Blanket chest by Meristem Woodworks"
-        @title="Meristem Woodworks"
-        @description="Custom furniture showcase website highlighting Olympic Peninsula craftsmanship. Built with responsive design and optimized for local artisan discovery."
-        @tech="Ember.js, SCSS, Swiper"
-      />
-      
-      <Ad 
-        @link="https://chopping.netlify.app"
-        @image="sasquatch.png"
-        @alt="Sasquatch"
-        @title="Chopping"
-        @description="An interactive browser game featuring smooth animations and engaging gameplay mechanics. Built entirely with vanilla JavaScript, showcasing DOM manipulation and game logic."
-        @tech="Vanilla JavaScript, HTML5 Canvas, MSPaint"
-      />
-      
-      <Ad 
-        @link="https://graycoastguildhall.netlify.app/"
-        @image="back.jpg"
-        @alt="photograph of an old theatre that says 'Quilcene'"
-        @title="Gray Coast Guildhall"
-        @description="Community arts platform connecting local artists and audiences. Features event management, artist showcases, and community engagement tools for rural arts spaces."
-        @tech="React.js, Tailwind.css, Vite"
-      />
+      <article class="sidebar-project">
+        <a href="https://github.com/BornDeleuze" target="_blank" rel="noopener noreferrer">
+          <img src="/octocat.webp" alt="GitHub logo" loading="lazy" />
+          <h3>More on GitHub</h3>
+          <p>
+            Explore my coding journey through repositories showcasing full-stack development, 
+            from Ember.js applications to Ruby on Rails backends.
+          </p>
+          <span class="project-tech">Various Technologies</span>
+        </a>
+      </article>
 
-      <Ad 
-        @link="https://github.com/BornDeleuze"
-        @image="octocat.webp"
-        @alt="github logo"
-        @title="Github Portfolio"
-        @description="Explore my coding journey through repositories showcasing full-stack development, from Ember.js applications to Ruby on Rails backends."
-        @tech="Various Technologies"
-      />
-      
-    </div>
+    </aside>
   </main>
 </div>
